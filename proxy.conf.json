@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "https://www.metaweather.com",
+        "secure": false
+    }
+}

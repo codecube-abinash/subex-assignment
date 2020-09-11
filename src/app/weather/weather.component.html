@@ -1,0 +1,30 @@
+<div>
+    <div class="dropdown">
+        <button class="dropbtn">{{SelectedCity}}</button>
+        <div class="dropdown-content">
+            <a (click)="SelectCity('Bangalore')">Bangalore</a>
+            <a (click)="SelectCity('Mumbai')"> Mumbai</a>
+            <a (click)="SelectCity('Delhi')">Delhi</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="table">
+        <table>
+            <tr class="header">
+                <td>Sl no</td>
+                <td>City</td>
+                <td>Date</td>
+                <td>Average Temprature</td>
+            </tr>
+            <tr *ngFor="let item of AvgArray; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{SelectedCity}}</td>
+                <td>{{item.date}}</td>
+                <td>{{item.average}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="loader" *ngIf="showLoader"></div>
+</div>
